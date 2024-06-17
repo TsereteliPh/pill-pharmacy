@@ -1,0 +1,63 @@
+.footer {
+	background: linear-gradient(to bottom, #fff 0%, #00bfa5 100%);
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 450px;
+
+		@include hg {
+			min-height: 200px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		width: 470px;
+		height: auto;
+		aspect-ratio: 2/1;
+		background: url(assets/images/logo-main--dark.png) no-repeat 50% / contain;
+		transition: var(--transition);
+
+		@include hg {
+			width: 250px;
+		}
+
+		@include mouse {
+
+			&:hover {
+				scale: 1.02;
+			}
+		}
+	}
+
+	&__links {
+		padding: 20px 0;
+		background: var(--secondary);
+	}
+
+	&__links-container {
+		display: flex;
+		gap: 60px;
+		align-items: center;
+		justify-content: center;
+
+		@include hg {
+			font-size: 16px;
+		}
+
+		@include xs {
+			flex-direction: column;
+			gap: 10px;
+		}
+	}
+
+	&__links-policy {
+		@include ui-link(var(--fc-dark));
+	}
+
+	&__links-rights {
+		font-weight: 700;
+	}
+}
