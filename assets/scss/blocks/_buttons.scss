@@ -1,0 +1,36 @@
+.btn {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: center;
+	min-width: 200px;
+	padding: 25px 20px;
+	color: var(--fc-light);
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: uppercase;
+	background: var(--primary);
+	border: 2px solid transparent;
+	border-radius: 20px;
+	transition: var(--transition);
+
+	@include hg {
+		padding: 15px 20px;
+	}
+
+	@include mouse {
+
+		&:hover {
+			border-color: var(--secondary);
+		}
+	}
+
+	&:active {
+		opacity: 0.8;
+	}
+
+	&--round {
+		padding: 20px 15px;
+		border-radius: 50px;
+	}
+}

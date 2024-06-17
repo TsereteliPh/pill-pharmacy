@@ -6,7 +6,7 @@
 	--font-decorative: "TrainOne", "Arial", sans-serif;
 
 	//COLORS
-	--primary: #229761;
+	--primary: #00bfa5;
 	--secondary: #d5b02f;
 
 	--fc-dark: #000;
@@ -16,6 +16,9 @@
 
 	//Transition
 	--transition: all 0.3s ease;
+
+	//Shadow
+	--shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
 
 	//Z-index
 	--ui-index-1: 1; // Для наползающих элементов в общем потоке

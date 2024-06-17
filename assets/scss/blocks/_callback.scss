@@ -1,0 +1,78 @@
+.callback {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	font-family: var(--font-secondary);
+
+	&__socials-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__socials-text,
+	&__tel-text {
+		font-size: 12px;
+		text-shadow: var(--shadow);
+	}
+
+	&__socials-text {
+		text-transform: uppercase;
+	}
+
+	&__socials {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+		align-items: center;
+	}
+
+	&__socials-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		background: var(--fc-dark);
+		border-radius: 10px;
+
+		svg {
+			color: var(--fc-light);
+
+			@include hg {
+				width: 25px;
+				height: auto;
+			}
+		}
+	}
+
+	&__phones {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+
+		@include hg {
+			gap: 10px;
+		}
+	}
+
+	&__tel {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__tel-link {
+		font-size: 20px;
+		text-shadow: var(--shadow);
+		@include ui-link(var(--fc-dark));
+
+		@include hg {
+			font-size: 18px;
+		}
+
+		@include md {
+			font-size: 16px;
+		}
+	}
+}

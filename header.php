@@ -11,7 +11,72 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<header class="header">
+<?php
+	$tel_ru = get_field( 'tel_ru', 'options' );
+	$tel_kz = get_field( 'tel_kz', 'options' );
+	$socials = get_field( 'socials', 'options' );
+?>
 
+<header class="header">
+	<div class="header__container">
+		<a href="<?php echo bloginfo( 'url' ); ?>" class="header__logo" aria-label="Логотип Аптечной сети Таблетка"></a>
+
+		<?php if ( $tel_ru || $tel_kz || $socials ) : ?>
+			<div class="header__callback callback">
+				<?php if ( $socials ) : ?>
+					<div class="callback__socials-wrapper">
+						<div class="callback__socials-text">Связаться с нами:</div>
+
+						<div class="callback__socials">
+							<?php foreach ( $socials as $social ) : ?>
+								<a href="<?php echo $social['link']; ?>" class="callback__socials-link">
+									<svg width="35" height="35"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-<?php echo $social['social']; ?>"></use></svg>
+								</a>
+							<?php endforeach; ?>
+						</div>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( $tel_ru || $tel_kz ) : ?>
+					<div class="callback__phones">
+						<?php if ( $tel_ru ) : ?>
+							<div class="callback__tel">
+								<a href="<?php echo preg_replace( '/[^0-9,+]/', '', $tel_ru ); ?>" class="callback__tel-link"><?php echo $tel_ru; ?></a>
+
+								<div class="callback__tel-text">(для связи в РФ)</div>
+							</div>
+						<?php endif; ?>
+
+						<?php if ( $tel_kz ) : ?>
+							<div class="callback__tel">
+								<a href="<?php echo preg_replace( '/[^0-9,+]/', '', $tel_kz ); ?>" class="callback__tel-link"><?php echo $tel_kz; ?></a>
+
+								<div class="callback__tel-text">(для связи в KZ)</div>
+							</div>
+						<?php endif; ?>
+					</div>
+				<?php endif; ?>
+			</div>
+		<?php endif; ?>
+
+		<button class="btn btn--round header__modal" data-fancybox data-src="#success">
+			Связаться
+			<svg width="20" height="20"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
+		</button>
+
+		<button class="header__burger" type="button">
+			<span></span>
+		</button>
+	</div>
+
+	<div class="header__drop">
+		<?php wp_nav_menu( array(
+			'theme_location' => 'menu_main',
+			'container' => '',
+			'menu_id' => 'menu-main',
+			'menu_class' => 'reset-list header__menu'
+		) ); ?>
+	</div>
 </header>
+
 <main class="main">
