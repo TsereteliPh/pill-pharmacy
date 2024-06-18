@@ -1,0 +1,20 @@
+.input {
+	width: 100%;
+	min-height: 40px;
+	padding: 5px 20px;
+	color: var(--fc-dark);
+	font-size: 14px;
+	background: #eee;
+	border: 1px solid transparent;
+	border-radius: 10px;
+	transition: var(--transition);
+
+	&:hover,
+	&:focus {
+		border-color: var(--fc-dark);
+	}
+
+	&::placeholder {
+		color: rgba(#000, 0.45);
+	}
+}

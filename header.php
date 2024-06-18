@@ -59,7 +59,7 @@
 			</div>
 		<?php endif; ?>
 
-		<button class="btn btn--round header__modal" data-fancybox data-src="#success">
+		<button class="btn btn--round header__modal" data-fancybox data-src="#callback">
 			Связаться
 			<svg width="20" height="20"><use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#icon-phone"></use></svg>
 		</button>
