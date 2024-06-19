@@ -12,8 +12,14 @@
 			max-height: 100svh;
 			overflow: auto;
 			background: rgba(#fff, 0.5);
+			border-bottom-right-radius: 40px;
+			border-bottom-left-radius: 40px;
 			box-shadow: 0 0 10px rgba(#000, 0.5);
 			backdrop-filter: blur(10px);
+		}
+
+		.header__drop {
+			transition: var(--transition);
 		}
 	}
 
@@ -122,6 +128,10 @@
 			border-radius: 50%;
 		}
 
+		@include sm {
+			font-size: 0;
+		}
+
 		@include xs {
 			width: 35px;
 		}
@@ -223,7 +233,6 @@
 			overflow: hidden;
 			background: none;
 			backdrop-filter: none;
-			transition: var(--transition);
 		}
 	}
 
