@@ -29,6 +29,10 @@
 		border-top-left-radius: 50%;
 		border-top-right-radius: 50%;
 		content: "";
+
+		@include xs {
+			height: 40px;
+		}
 	}
 
 	&__content {
