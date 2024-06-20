@@ -1,0 +1,97 @@
+.premises-requirements {
+	margin: 60px 0 40px;
+
+	@include xs {
+		margin: 40px 0 30px;
+	}
+
+	&__text {
+		margin-top: 30px;
+		color: var(--fc-grey);
+		text-align: right;
+
+		@include xs {
+			margin-top: 20px;
+			font-size: 16px;
+			text-align: left;
+		}
+	}
+
+	&__box {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		gap: 30px;
+		align-items: center;
+		margin-top: 80px;
+
+		@include hg {
+			margin-top: 60px;
+		}
+
+		@include lg {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include md {
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+
+		@include xs {
+			margin-top: 40px;
+		}
+
+		&::after {
+			display: block;
+			grid-column: span 2;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 1250/750;
+			background: url(assets/images/premises-requirements-bg.jpg) no-repeat 50% / contain;
+			content: "";
+
+			@include lg {
+				grid-column: auto;
+			}
+
+			@include md {
+				order: -1;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		grid-column: span 3;
+		gap: 20px;
+
+		@include lg {
+			grid-column: auto;
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		min-height: 130px;
+		padding: 25px 15px 25px 55px;
+		color: var(--fc-semi-dark);
+		font-size: 24px;
+		background: linear-gradient(160deg, var(--primary) 0%, var(--primary) 10%, #fff 130%);
+		border-radius: 30px;
+
+		@include hg {
+			padding: 25px 40px;
+			font-size: 20px;
+		}
+
+		@include xs {
+			min-height: 80px;
+			padding: 20px;
+			font-size: 16px;
+			border-radius: 15px;
+		}
+	}
+}
