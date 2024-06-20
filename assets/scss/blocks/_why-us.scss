@@ -1,0 +1,121 @@
+.why-us {
+	position: relative;
+	margin: 30px 0;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 1140px;
+		height: auto;
+		aspect-ratio: 1140/650;
+		background: url(assets/images/why-us-bg.jpg) no-repeat 50% / contain;
+		transform: translateX(-50%);
+		content: "";
+
+		@include hg {
+			bottom: 50px;
+			width: 1000px;
+		}
+
+		@include lg {
+			bottom: 100px;
+			width: 900px;
+		}
+
+		@include md {
+			bottom: 0;
+			width: 800px;
+		}
+
+		@include sm {
+			opacity: 0.8;
+		}
+	}
+
+	&__title {
+
+		span {
+			display: block;
+		}
+	}
+
+	&__text {
+		margin-top: 30px;
+		color: var(--fc-grey);
+		text-align: right;
+
+		@include xs {
+			margin-top: 20px;
+			font-size: 16px;
+			text-align: left;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 60px 250px;
+		align-items: center;
+		min-height: 600px;
+		margin-top: 140px;
+
+		@include hg {
+			margin-top: 60px;
+		}
+
+		@include md {
+			gap: 40px 200px;
+			min-height: 420px;
+		}
+
+		@include sm {
+			gap: 20px 60px;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+			margin-top: 40px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		gap: 25px;
+		align-items: flex-start;
+		width: 100%;
+		max-width: 450px;
+
+		@include md {
+			gap: 10px;
+			font-size: 18px;
+		}
+
+		@include xs {
+			max-width: none;
+		}
+
+		&:nth-child(even) {
+			margin-left: auto;
+
+			@include xs {
+				margin-left: 0;
+			}
+		}
+
+		&::before {
+			display: block;
+			flex-shrink: 0;
+			width: 50px;
+			height: auto;
+			aspect-ratio: 1/1;
+			background: url(assets/images/icon-plus.png) no-repeat 50% / contain;
+			content: "";
+
+			@include md {
+				width: 30px;
+			}
+		}
+	}
+}
