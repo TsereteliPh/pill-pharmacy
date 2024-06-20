@@ -1,0 +1,139 @@
+.partner-requirements {
+	margin: 100px 0 40px;
+	overflow: hidden;
+
+	@include hg {
+		margin: 60px 0 40px;
+	}
+
+	@include xs {
+		margin: 40px 0 30px;
+	}
+
+	&__text {
+		color: var(--fc-grey);
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__list {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		align-items: center;
+		justify-content: center;
+		min-height: 420px;
+		margin: 100px 0 45px;
+		padding: 100px 80px;
+		background: linear-gradient(160deg, var(--primary) 0%, var(--primary) 15%, #fff 110%);
+		border-radius: 30px;
+
+		@include lg {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			justify-items: center;
+			min-height: auto;
+			padding: 60px 40px;
+		}
+
+		@include md {
+			grid-template-columns: 1fr 1fr;
+			margin: 60px 0 0;
+		}
+
+		@include sm {
+			margin-top: 40px;
+		}
+
+		@include xs {
+			grid-template-columns: 1fr;
+			padding: 40px 20px;
+		}
+
+		&::before,
+		&::after {
+			position: absolute;
+			top: 50%;
+			z-index: var(--ui-index-1);
+			transform: translateY(-50%);
+			content: "";
+			pointer-events: none;
+
+			@include md {
+				display: none;
+			}
+		}
+
+		&::before {
+			left: -50px;
+			width: 380px;
+			height: auto;
+			background: url(assets/images/element-pluses--left.png) no-repeat 50% / contain;
+			aspect-ratio: 380/540;
+
+			@include hg {
+				left: -80px;
+			}
+		}
+
+		&::after {
+			right: -60px;
+			width: 280px;
+			height: auto;
+			background: url(assets/images/element-pluses--right.png) no-repeat 50% / contain;
+			aspect-ratio: 280/540;
+
+			@include hg {
+				right: -120px;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+		width: 100%;
+		max-width: 250px;
+		min-height: 220px;
+		padding: 20px;
+		background: #fff;
+		border-radius: 15px;
+
+		@include lg {
+			max-width: none;
+			height: 100%;
+			padding: 20px 10px;
+		}
+
+		@include md {
+			justify-content: center;
+			padding: 20px 60px;
+		}
+
+		@include sm {
+			padding: 20px;
+		}
+	}
+
+	&__item-icon {
+		display: flex;
+		width: auto;
+		height: 90px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	&__item-text {
+		font-size: 16px;
+		text-align: center;
+	}
+}
