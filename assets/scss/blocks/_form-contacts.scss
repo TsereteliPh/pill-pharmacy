@@ -1,0 +1,101 @@
+.form-contacts {
+	margin-top: 80px;
+	padding: 40px calc(60px - 1.5rem);
+	background: url(assets/images/form-contacts-bg.jpg) no-repeat 50% / cover;
+
+	@include md {
+		padding: 40px calc(60px - 0.75rem);
+	}
+
+	@include xs {
+		padding: 30px 0;
+	}
+
+	&__container {
+		padding: 60px 110px 75px 150px;
+		background: linear-gradient(to bottom, #dedddd 0%, rgba(#d9d9d9, 0) 100%);
+		border-radius: 20px;
+		backdrop-filter: blur(15px);
+
+		@include hg {
+			padding: 60px 80px 100px;
+		}
+
+		@include lg {
+			padding: 60px 40px 80px;
+		}
+
+		@include xs {
+			padding: 40px 15px;
+			backdrop-filter: blur(10px);
+		}
+	}
+
+	&__title {
+		max-width: 500px;
+		margin-bottom: 0;
+		font-size: clamp(0.9rem, 0.697rem + 1.129vw, 1.6rem);
+		text-align: left;
+
+		@include md {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+
+	&__content {
+		display: flex;
+		gap: 30px;
+		justify-content: space-between;
+		margin-top: 30px;
+
+		@include md {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__form {
+
+		.main-form__label {
+			color: var(--primary);
+
+			@include md {
+				text-align: center;
+			}
+		}
+	}
+
+	&__contacts {
+		max-width: 400px;
+		height: fit-content;
+		padding: 25px 20px;
+		background: rgba(#fff, 0.4);
+		border-radius: 30px;
+	}
+
+	&__contacts-text {
+		font-size: 24px;
+
+		@include md {
+			font-size: 20px;
+			text-align: center;
+		}
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__callback {
+		margin-top: 20px;
+
+		@include md {
+			justify-content: center;
+		}
+
+		.callback__socials-link {
+			background: var(--primary);
+		}
+	}
+}

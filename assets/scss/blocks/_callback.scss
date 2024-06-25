@@ -48,6 +48,7 @@
 	&__phones {
 		display: flex;
 		flex-direction: column;
+		flex-shrink: 0;
 		gap: 20px;
 		align-items: center;
 

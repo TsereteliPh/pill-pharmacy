@@ -1,0 +1,35 @@
+.main-form {
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	max-width: 330px;
+
+	&__label {
+		font-size: 24px;
+
+		@include md {
+			font-size: 20px;
+		}
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__submit {
+		margin-top: 20px;
+		padding: 20px;
+	}
+
+	&__policy {
+		max-width: 230px;
+		margin: -15px auto 0;
+		color: var(--primary);
+		font-size: 12px;
+		text-align: center;
+
+		a {
+			@include ui-link(var(--secondary));
+		}
+	}
+}
