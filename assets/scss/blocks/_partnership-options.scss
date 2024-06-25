@@ -1,0 +1,113 @@
+.partnership-options {
+	position: relative;
+	padding: 120px 0 20px;
+	overflow: hidden;
+
+	@include xs {
+		padding: 60px 0 20px;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		width: 750px;
+		height: auto;
+		aspect-ratio: 750/280;
+		background: url(assets/images/partnership-options-bg.png) no-repeat 50% / contain;
+		content: "";
+
+		@include md {
+			width: 600px;
+		}
+
+		@include xs {
+			width: 450px;
+		}
+	}
+
+	&::before {
+		top: 0;
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+		bottom: 0;
+		transform: rotate(180deg);
+	}
+
+	&__text {
+		margin-top: 80px;
+		color: var(--fc-grey);
+		text-align: right;
+
+		@include hg {
+			margin-top: 60px;
+		}
+
+		@include md {
+			margin-top: 40px;
+		}
+
+		@include xs {
+			margin-top: 20px;
+			font-size: 16px;
+			text-align-last: left;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 35px;
+		align-items: stretch;
+		justify-content: center;
+		margin-top: 105px;
+
+		@include hg {
+			margin-top: 80px;
+		}
+
+		@include md {
+			margin-top: 60px;
+		}
+	}
+
+	&__item {
+		flex: 0 0 350px;
+		min-height: 430px;
+		overflow: hidden;
+		background: #fff;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		box-shadow: 0 5px 30px rgba(#000, 0.25);
+
+		@include sm {
+			flex-basis: 320px;
+		}
+	}
+
+	&__item-label {
+		padding: 50px 30px 90px;
+		color: #fff;
+		font-size: 24px;
+		text-align: center;
+		background: url(assets/images/partnership-options-item-bg.jpg) no-repeat 50% / cover;
+	}
+
+	&__item-text {
+		margin-top: 40px;
+		padding: 0 30px;
+		font-size: 15px;
+	}
+
+	&__btn {
+		position: relative;
+		z-index: var(--ui-index-1);
+		margin: 100px auto 0;
+
+		@include xs {
+			margin: 40px auto 0;
+		}
+	}
+}
