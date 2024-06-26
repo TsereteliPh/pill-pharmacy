@@ -121,7 +121,7 @@ add_action( "wp_ajax_nopriv_send_mail", "send_mail" );
 function send_mail() {
 	if ( empty ( $_POST['form_name'] ) || empty( $_POST['page_request'] ) ) exit;
 	if ( $_POST['form_name'] == 'Связаться' && ! wp_verify_nonce( $_POST['modal_callback_nonce'], $_POST['form_name'] ) ) exit;
-	if ( $_POST['form_name'] == 'Консультация' && ! wp_verify_nonce( $_POST['form-contacts-nonce'], $_POST['form_name'] ) ) exit;
+	if ( $_POST['form_name'] == 'Консультация' && ( ! wp_verify_nonce( $_POST['form-contacts-nonce'], $_POST['form_name'] ) && ! wp_verify_nonce( $_POST['form-atlas-nonce'], $_POST['form_name'] ) ) ) exit;
 
 	$form_name = $_POST['form_name'];
 	$mail = '';
