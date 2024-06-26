@@ -3,11 +3,11 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_667c27d84198b',
-	'title' => 'Block:main-list',
+	'key' => 'group_667c2f3e9c0cb',
+	'title' => 'Block:functionality-slider',
 	'fields' => array(
 		array(
-			'key' => 'field_667c27d84ea13',
+			'key' => 'field_667c2f3ea1e84',
 			'label' => 'Заголовок',
 			'name' => 'title',
 			'aria-label' => '',
@@ -29,7 +29,7 @@ acf_add_local_field_group(array(
 			'acfe_group_modal_size' => 'large',
 			'sub_fields' => array(
 				array(
-					'key' => 'field_667c27d859b46',
+					'key' => 'field_667c2f3ea96a7',
 					'label' => 'Тип',
 					'name' => 'type',
 					'aria-label' => '',
@@ -63,7 +63,7 @@ acf_add_local_field_group(array(
 					'min' => '',
 				),
 				array(
-					'key' => 'field_667c27d85d66c',
+					'key' => 'field_667c2f3eacff3',
 					'label' => 'Текст',
 					'name' => 'text',
 					'aria-label' => '',
@@ -84,7 +84,7 @@ acf_add_local_field_group(array(
 					'acfe_field_group_condition' => 0,
 				),
 				array(
-					'key' => 'field_667c27d861301',
+					'key' => 'field_667c2f3eb09eb',
 					'label' => 'Выделенный текст',
 					'name' => 'highlighted',
 					'aria-label' => '',
@@ -107,9 +107,9 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
-			'key' => 'field_667c27d855f42',
-			'label' => 'Список',
-			'name' => 'list',
+			'key' => 'field_667c2f4ebc1c6',
+			'label' => 'Слайдер',
+			'name' => 'slider',
 			'aria-label' => '',
 			'type' => 'repeater',
 			'instructions' => '',
@@ -126,21 +126,21 @@ acf_add_local_field_group(array(
 			'min' => 0,
 			'max' => 0,
 			'collapsed' => '',
-			'button_label' => 'Добавить элемент',
+			'button_label' => 'Добавить слайд',
 			'acfe_field_group_condition' => 0,
 			'rows_per_page' => 20,
 			'sub_fields' => array(
 				array(
-					'key' => 'field_667c27d868824',
-					'label' => 'Текст',
-					'name' => 'text',
+					'key' => 'field_667c2f5cbc1c7',
+					'label' => 'Заголовок',
+					'name' => 'label',
 					'aria-label' => '',
 					'type' => 'text',
 					'instructions' => '',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array(
-						'width' => '',
+						'width' => '40',
 						'class' => '',
 						'id' => '',
 					),
@@ -150,7 +150,30 @@ acf_add_local_field_group(array(
 					'prepend' => '',
 					'append' => '',
 					'acfe_field_group_condition' => 0,
-					'parent_repeater' => 'field_667c27d855f42',
+					'parent_repeater' => 'field_667c2f4ebc1c6',
+				),
+				array(
+					'key' => 'field_667c2f71bc1c8',
+					'label' => 'Текст',
+					'name' => 'text',
+					'aria-label' => '',
+					'type' => 'textarea',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'acfe_textarea_code' => 0,
+					'maxlength' => '',
+					'rows' => 4,
+					'placeholder' => '',
+					'new_lines' => 'br',
+					'acfe_field_group_condition' => 0,
+					'parent_repeater' => 'field_667c2f4ebc1c6',
 				),
 			),
 		),
@@ -180,7 +203,7 @@ acf_add_local_field_group(array(
 	'acfe_display_title' => '',
 	'acfe_meta' => '',
 	'acfe_note' => '',
-	'modified' => 1719414698,
+	'modified' => 1719414683,
 ));
 
 endif;

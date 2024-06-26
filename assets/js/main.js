@@ -313,6 +313,43 @@ if (clientsCarousel) {
 	});
 }
 
+//Слайдер blocks/rest
+
+const functionalityCarousel = document.querySelector('.functionality-slider__slider');
+
+if (functionalityCarousel) {
+	let functionalitySwiper = new Swiper(functionalityCarousel, {
+		slidesPerView: 1,
+		spaceBetween: 25,
+		autoHeight: true,
+		navigation: {
+			nextEl: '.functionality-slider__next',
+			prevEl: '.functionality-slider__prev',
+		},
+		pagination: {
+			el: '.functionality-slider__pagination',
+			clickable: true,
+		},
+		breakpoints: {
+			1440: {
+				spaceBetween: 120,
+				slidesPerView: 'auto',
+				autoHeight: false,
+			},
+			992: {
+				spaceBetween: 60,
+				slidesPerView: 'auto',
+				autoHeight: false,
+			},
+			769: {
+				spaceBetween: 40,
+				slidesPerView: 'auto',
+				autoHeight: false,
+			}
+		}
+	});
+}
+
 // Функционал шапки сайта
 
 document.addEventListener('DOMContentLoaded', function(e) {
