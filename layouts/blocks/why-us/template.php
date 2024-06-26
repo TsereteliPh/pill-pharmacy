@@ -14,7 +14,7 @@
 			if ( $advantages ) :
 				?>
 
-				<ul class="reset-list why-us__list">
+				<ul class="reset-list plus-ul why-us__list">
 					<?php foreach ( $advantages as $advantage ) : ?>
 						<li class="why-us__item"><?php echo $advantage['text']; ?></li>
 					<?php endforeach; ?>

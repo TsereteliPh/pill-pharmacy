@@ -81,16 +81,7 @@
 	}
 
 	&__item {
-		display: flex;
-		gap: 25px;
-		align-items: flex-start;
-		width: 100%;
 		max-width: 450px;
-
-		@include md {
-			gap: 10px;
-			font-size: 18px;
-		}
 
 		@include xs {
 			max-width: none;
@@ -101,20 +92,6 @@
 
 			@include xs {
 				margin-left: 0;
-			}
-		}
-
-		&::before {
-			display: block;
-			flex-shrink: 0;
-			width: 50px;
-			height: auto;
-			aspect-ratio: 1/1;
-			background: url(assets/images/icon-plus.png) no-repeat 50% / contain;
-			content: "";
-
-			@include md {
-				width: 30px;
 			}
 		}
 	}
