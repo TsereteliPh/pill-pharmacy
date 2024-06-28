@@ -1,0 +1,293 @@
+.partner-stories {
+	margin: 100px 0 40px;
+	overflow: hidden;
+
+	@include hg {
+		margin: 60px 0 40px;
+	}
+
+	@include xs {
+		margin: 40px 0 30px;
+	}
+
+	&__box {
+		position: relative;
+		max-width: 1120px;
+		margin: 160px auto 0;
+
+		@include hg {
+			margin: 120px auto 0;
+		}
+
+		@include md {
+			margin: 60px auto 0;
+		}
+
+		@include xs {
+			margin: 30px auto 0;
+		}
+
+		&::before {
+			position: absolute;
+			bottom: 100px;
+			left: -50px;
+			width: 130px;
+			height: 115px;
+			background: url(assets/images/element-grid--colored.png) no-repeat 50% / contain;
+			content: "";
+
+			@include lg {
+				display: none;
+			}
+		}
+	}
+
+	&__plus-element-1,
+	&__plus-element-2,
+	&__plus-element-3,
+	&__plus-element-4,
+	&__plus-element-5 {
+		position: absolute;
+		z-index: var(--ui-index-2);
+		pointer-events: none;
+
+		@include md {
+			display: none;
+		}
+	}
+
+	&__plus-element-1 {
+		top: -100px;
+		left: 30px;
+		width: 100px;
+
+		@include hg {
+			top: -80px;
+			width: 80px;
+		}
+	}
+
+	&__plus-element-2 {
+		top: 10px;
+		right: -160px;
+		width: 30px;
+
+		@include hg {
+			right: -110px;
+		}
+
+		@include lg {
+			display: none;
+		}
+	}
+
+	&__plus-element-3 {
+		right: -115px;
+		bottom: 120px;
+		width: 90px;
+
+		@include hg {
+			right: -70px;
+			width: 60px;
+		}
+
+		@include lg {
+			right: -30px;
+			bottom: 45px;
+		}
+	}
+
+	&__plus-element-4 {
+		bottom: 10px;
+		left: 100px;
+		width: 50px;
+	}
+
+	&__plus-element-5 {
+		bottom: 220px;
+		left: -200px;
+		width: 25px;
+	}
+
+	&__slider {
+		padding: 60px 0 40px;
+		background: linear-gradient(45deg, var(--primary) 0%, #d9d9d9 100%);
+		border-radius: 25px;
+
+		@include xs {
+			padding: 40px 0 20px;
+		}
+
+		&::before {
+			position: absolute;
+			top: -15px;
+			right: -50px;
+			width: 130px;
+			height: 115px;
+			background: url(assets/images/element-grid.png) no-repeat 50% / contain;
+			content: "";
+
+			@include xs {
+				top: -10px;
+				right: -30px;
+				width: 80px;
+				height: 70px;
+			}
+		}
+
+		&::after {
+
+			@include lg {
+				position: absolute;
+				bottom: -15px;
+				left: -50px;
+				width: 130px;
+				height: 115px;
+				background: url(assets/images/element-grid.png) no-repeat 50% / contain;
+				content: "";
+			}
+
+			@include md {
+				bottom: -40px;
+				left: -80px;
+			}
+
+			@include sm {
+				display: none;
+			}
+		}
+	}
+
+	&__label {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		align-items: center;
+		color: var(--fc-light);
+		font-weight: 700;
+		font-size: clamp(0.9rem, 0.639rem + 1.452vw, 1.8rem);
+
+		@include xs {
+			gap: 15px;
+		}
+
+		&::after {
+			display: block;
+			width: 55px;
+			height: 2px;
+			background-color: var(--fc-light);
+			content: "";
+		}
+	}
+
+	&__list {
+		margin-top: 30px;
+
+		@include md {
+			margin-top: 20px;
+		}
+	}
+
+	&__item {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 100px;
+		align-items: center;
+		padding: 0 75px;
+		color: var(--fc-light);
+
+		@include lg {
+			grid-template-columns: 300px 1fr;
+			gap: 50px;
+			padding: 0 40px;
+		}
+
+		@include md {
+			grid-template-columns: 1fr;
+			gap: 20px;
+			padding: 0 60px;
+		}
+
+		@include sm {
+			padding: 0 30px;
+		}
+
+		@include xs {
+			padding: 0 15px;
+		}
+	}
+
+	&__item-info {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 10px 20px;
+		margin-left: 50px;
+
+		@include lg {
+			margin-left: 0;
+		}
+
+		@include sm {
+			gap: 5px 15px;
+		}
+	}
+
+	&__item-photo {
+		display: flex;
+		grid-row: span 2;
+		align-items: center;
+		width: 130px;
+		height: 130px;
+		overflow: hidden;
+		border: 4px solid var(--fc-light);
+		border-radius: 50%;
+
+		@include sm {
+			width: 80px;
+			height: 80px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__item-name {
+		align-self: end;
+		font-weight: 700;
+		font-size: 22px;
+
+		@include sm {
+			font-size: 20px;
+		}
+
+		@include xs {
+			font-size: 18px;
+		}
+	}
+
+	&__item-city {
+
+		@include sm {
+			font-size: 18px;
+		}
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+
+	&__item-text {
+		line-height: 1.6;
+
+		@include sm {
+			font-size: 18px;
+		}
+
+		@include xs {
+			font-size: 16px;
+		}
+	}
+}
